@@ -1,0 +1,15 @@
+<h1> DA TA-DA LIST: </h1>
+<hr/>
+<% @items.each do |item| %>
+	<ul>
+	<%= item.title %>
+	</ul>
+  <%= link_to 'Edit Item', edit_item_path(item) %>
+  <%= link_to 'Delete Item', item_path(item),  method: :delete %>
+<% end %>
+
+<hr/>
+<h3><%= link_to 'New Item', new_item_path %> </h3>
+
+
+
